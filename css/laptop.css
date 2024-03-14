@@ -1,0 +1,512 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+section {
+  width: 100%;
+}
+
+section > .container {
+  width: 100%;
+  /* margin: auto; */
+  display: block;
+
+  /* padding: 30px 5px; */
+}
+
+/*Can chinh cho phan banner*/
+#banner {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+/*********/
+
+.banner-image {
+  width: 100%;
+  height: 400px;
+  /*Chỉnh cho ảnh banner tối đi*/
+  filter: brightness(50%);
+  /*cắt bỏ 1 phần phía dưới của banner*/
+  object-fit: cover;
+  object-position: top;
+
+  margin-bottom: -54px;
+}
+/*********/
+
+/*Căn chỉnh cho h1 và span trong phần id banner */
+h1 {
+  color: #f7f7f7;
+  /*Căn chỉnh cho phần chữ nằm bên trên ảnh*/
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#banner span {
+  color: #f7f7f7;
+  /*Căn chỉnh cho phần chữ nằm bên trên ảnh*/
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+/*********/
+
+#nav-bar {
+  text-align: center;
+}
+/*Sử dụng flex lauoyt cho nav-bar*/
+#nav-bar .container {
+  padding: 0;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+
+.navbar-item {
+  text-transform: uppercase;
+  color: inherit;
+  flex: 0 1 170px;
+  padding-top: 16px;
+  text-decoration: none;
+  border-left: solid 0.5px #dcdcdc;
+}
+
+.item-3,
+.item-4 {
+  border-left: none;
+}
+
+.item-5 {
+  border-right: solid 0.5px #dcdcdc;
+}
+
+i {
+  color: #2ba1ea;
+}
+/*********/
+
+h2 {
+  margin-bottom: 30px;
+}
+
+/*Sử dụng grid layout cho phần about (mục tiêu nghề nghiệp, thông tin cá nhân)*/
+/* #about .container {
+  padding-top: 0; */
+/*****Su dung bootstrap de bo cuc thay cho cach cu*****/
+/* display: grid;
+  grid-template-columns: repeat(2, minmax(384px, 1fr));
+  justify-content: center; */
+/* } */
+
+#target {
+  padding: 60px 50px 40px;
+  background-color: #f7f7f7;
+}
+
+#personal-info {
+  padding: 60px 50px 40px;
+  background-color: #ececec;
+}
+
+/*Bỏ phần bullet list của thông tin cá nhân*/
+.mt-40 {
+  list-style: none;
+  padding-left: 0;
+}
+/*********/
+
+.mt-40 li {
+  margin-bottom: 8px;
+}
+
+/*In đậm phần giới tính, ngày sinh,...*/
+.mt-40 span {
+  font-weight: bold;
+}
+/*********/
+
+/*Sử dụng grid layout cho job-info (thông tin nghề nghiệp)*/
+/*Su dung bootstrap de bo cuc thay cho cach cu*/
+/* #job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  row-gap: 10px;
+  column-gap: 20px;
+  justify-content: center;
+} */
+
+/*Sử dụng grid layout bố cục cho các phần tiêu đề, icon kế bên và khối nội dung bên dưới của thông tin nghề nghiệp*/
+.job-info-content {
+  /* padding: 20px; */
+  /* border: solid #dcdcdc; */
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 70px 1fr;
+}
+
+.job-info-content h2 {
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.job-info-content > i {
+  padding: 10px;
+  font-size: 40px;
+  color: #afafaf;
+}
+
+.content {
+  grid-column: 1 / -1;
+  padding: 30px;
+}
+
+/*Căn chỉnh cho các phần nội dung bên trong khối nội dung của thông tin nghề nghiệp*/
+.content div {
+  margin-bottom: 25px;
+  /*Dùng để thêm dấu chấm màu xanh phía trước*/
+  position: relative;
+  left: 15px;
+}
+/*Thêm dấu chấm màu xanh phía trước*/
+.content div::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: -25px;
+  background-color: #2ba1ea;
+  top: 5px;
+  border-radius: 50%;
+}
+/********/
+
+.content div:last-child {
+  margin-bottom: 0;
+}
+
+.content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.content li::before {
+  content: "- ";
+}
+
+/* em {
+  font-size: 12px;
+} */
+
+/*Sử dụng grid layout bố cục cho phần nội dung sở thích*/
+.interests {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30px, 60px));
+  grid-template-rows: 60px 1fr;
+  column-gap: 30px;
+  row-gap: 20px;
+  padding: 30px 0;
+  margin-left: 15px;
+}
+
+.interests i {
+  text-align: center;
+  border: solid 0.7px #2ba1ea;
+  border-radius: 50%;
+  font-size: 25px;
+  padding-top: 30%;
+}
+
+.interests p {
+  text-align: center;
+}
+
+/*Căn chỉnh cho phần nội dung, thang điểm của ngôn ngữ, kỹ năng*/
+.skills-languages {
+  padding-left: 20px;
+}
+
+.point-ladder {
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #2ba1ea;
+  margin-right: 10px;
+}
+/********/
+
+/*Sử dụng grid layout cho phần chứng chỉ - giải thưởng */
+#certificate .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  grid-template-rows: 70px auto;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+}
+/*tạo padding trái phải để khi style background-color và khi kéo co dãn màn hình sẽ luôn có khoảng trắng 2 bên*/
+/* #certificate > div {
+  padding-left: 50px;
+  padding-right: 50px;
+} */
+
+#certificate h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+  padding: 20px 40px;
+}
+
+/*Sử dụng flex layout cho phần hình ảnh và tên, nội dung của phần chứng chỉ*/
+.certificate-items {
+  padding: 20px 0;
+  display: flex;
+}
+
+.certificate-items img {
+  width: 210px;
+}
+
+.certificate-items div:last-child {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.img-1 {
+  padding-left: 15px;
+}
+
+.have-left-border {
+  border-left: solid 0.5px #d6c08d;
+  padding-left: 15px;
+}
+
+.certificate-items ul {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.certificate-items li::before {
+  content: "- ";
+}
+/*******/
+
+/*Sử dụng grid layout cho phần dự án, chia màn hình thành 3 cột bằng nhau cho 3 dự án */
+#project .container {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: 70px 1fr;
+  justify-content: center;
+  column-gap: 1%;
+}
+
+#project h2 {
+  grid-column: 1 / -1;
+}
+
+.project-items img {
+  width: 100%;
+  height: 200px;
+}
+
+#project {
+  margin-top: 30px;
+}
+/*tạo padding trái phải để khi style background-color và khi kéo co dãn màn hình sẽ luôn có khoảng trắng 2 bên*/
+/* #project > div {
+  padding-left: 50px;
+  padding-right: 50px;
+} */
+
+.project-items {
+  border: solid 0.5px #afafaf;
+}
+
+.project-items div {
+  border-bottom: solid 0.5px #afafaf;
+  padding-top: 10px;
+  padding-left: 20px;
+  height: 50px;
+}
+
+.project-items div:nth-child(3) {
+  height: auto;
+}
+
+.project-name {
+  margin-top: 5px;
+}
+
+.project-items div p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.project-items div i {
+  color: #5b5a5a;
+  font-size: 16px;
+}
+
+.project-items p:last-child {
+  margin-right: 0;
+}
+
+.time {
+  width: 45px;
+  height: 30px;
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 40%;
+  background-color: #2ba1ea;
+  color: #f7f7f7;
+}
+
+/*Bố cục cho table*/
+table {
+  border-collapse: collapse;
+}
+
+table,
+tr,
+td {
+  border-top: solid 0.5px #afafaf;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+td:first-child {
+  padding-left: 5px;
+  width: 25%;
+  vertical-align: top;
+}
+/*************/
+
+/*Bố cục cho footer*/
+#footer {
+  margin-top: 40px;
+}
+
+#footer > div {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#footer .container {
+  background-color: #f7f7f7;
+  height: 80px;
+  text-align: center;
+}
+
+#footer ul {
+  list-style: none;
+}
+
+#footer li {
+  content: "";
+  display: inline-block;
+  margin-right: 30px;
+  padding-top: 30px;
+}
+
+#footer i {
+  font-size: 170%;
+  position: relative;
+  top: 3px;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+.footer-link {
+  display: inline-block;
+}
+/************/
+
+/*Phần nâng cao bổ sung ảnh cá nhân*/
+#nav-bar .container {
+  position: relative;
+}
+
+#nav-bar img {
+  width: 140px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 140px;
+  object-fit: cover;
+  object-position: top;
+  border: solid 5px #fff;
+}
+
+/*An thong tin*/
+.hidden {
+  display: none;
+}
+
+/*Style form*/
+.form-control {
+  background-color: #ececec;
+  border: none;
+  padding-left: 0;
+}
+
+#email {
+  width: 90%;
+  height: 35px;
+  border-radius: 5px;
+  border: solid 1px #736f6f;
+  padding-left: 10px;
+}
+
+#email:hover {
+  border: solid 1px #2ba1ea;
+}
+
+#email:focus {
+  outline: #2ba1ea;
+}
+
+label {
+  font-size: 13px;
+}
+
+.btn {
+  background-color: #086fb0;
+  color: #fff;
+}
+
+/*Phan an va hien thi thong tin nghe nghiep*/
+.view-more,
+.view-less {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #cdcd17;
+  width: 60%;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: #5b5a5a;
+}

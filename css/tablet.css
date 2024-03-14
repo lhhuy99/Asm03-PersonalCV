@@ -1,0 +1,69 @@
+/*Tablets and under*/
+/*tablets < 768px*/
+/*Su dung 767.98px dua theo tai lieu boostrap*/
+@media (max-width: 767.98px) {
+  html {
+    font-size: 12px;
+  }
+
+  /*navbar*/
+  .item-3 {
+    display: none;
+  }
+
+  #nav-bar img {
+    display: none;
+  }
+
+  .item-3,
+  .item-4 {
+    border-left: solid 0.5px #dcdcdc;
+  }
+
+  /*****/
+
+  /*Phan muc tieu nghe nghiep, thong tin ca nhan*/
+  /*Su dung cac class bootstrap de bo cuc trong file index.html*/
+
+  /*Can chinh le cho phu hop*/
+  #target,
+  #personal-info {
+    padding: 30px 20px 20px;
+  }
+  /*****/
+
+  /*Phan job-info*/
+  /*Su dung cac class bootstrap de bo cuc*/
+
+  /*Phan chung chi giai thuong*/
+  .certificate-items {
+    flex-direction: column;
+  }
+
+  .certificate-items div:last-child {
+    padding-top: 10px;
+  }
+
+  .right-side-items div:last-child {
+    border-left: solid 0.5px #d6c08d;
+    padding-left: 15px;
+  }
+
+  /*Phan du an*/
+
+  .project-items img {
+    height: 100px;
+  }
+
+  .project-items div:nth-child(3) {
+    height: 100px;
+  }
+
+  td:last-child {
+    padding-left: 5px;
+  }
+
+  .position {
+    margin-left: 50px;
+  }
+}
