@@ -1,6 +1,6 @@
 # Personal CV Website
 
-This is a static personal CV website
+This project is a static personal CV website that showcases personal details, skills, projects, education, and contact information. The project was developed to apply my front-end skills, and through it, I learned and applied HTML, CSS, JavaScript, and Bootstrap.
 
 ## Demo
 
